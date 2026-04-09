@@ -4,11 +4,7 @@ A modern and responsive developer portfolio built using Next.js, showcasing my p
 
 ## 🚀 Live Website
 
-👉 https://your-portfolio-link.com
-
-## 📸 Preview
-
-![Portfolio Screenshot](./public/preview.png)
+👉 https://shirin-portfolio.netlify.app/
 
 ## ✨ Features
 
@@ -23,7 +19,7 @@ A modern and responsive developer portfolio built using Next.js, showcasing my p
 * Next.js
 * React
 * Tailwind CSS
-* JavaScript / TypeScript
+* TypeScript
 
 ## 📂 Project Structure
 
@@ -36,7 +32,7 @@ A modern and responsive developer portfolio built using Next.js, showcasing my p
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Skshirin/shirin-portfolio
 ```
 
 Install dependencies:
@@ -53,20 +49,11 @@ npm run dev
 
 Open http://localhost:3000 in your browser.
 
-## 📌 What I Learned
-
-* Building scalable UI with Next.js
-* Component-based architecture
-* Responsive design principles
-* Performance optimization
 
 ## 👩‍💻 Author
 
 **Shirin Shaikh**
 
-* GitHub: https://github.com/your-username
-* LinkedIn: https://linkedin.com/in/your-profile
+* GitHub: https://github.com/Skshirin
+* LinkedIn: https://linkedin.com/in/shirinshaikh-dev
 
----
-
-⭐ If you like this project, feel free to star the repo!
