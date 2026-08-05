@@ -15,36 +15,50 @@ const fadeUp = {
 };
 
 const experiences = [
-{
-  company: "Gema Pvt. Ltd.",
-  role: "WordPress Developer Intern",
-  period: "Dec 2025 — Mar 2026",
-  location: "Remote",
-  project: "WordPress Website Development and Customization",
-  achievements: [
-    {
-      text: "Developed and customized responsive websites using WordPress, ensuring clean UI and user-friendly design.",
-      metric: null,
-    },
-    {
-      text: "Worked with themes and plugins to add functionality and improve overall website performance.",
-      metric: null,
-    },
-    {
-      text: "Assisted in building and managing website content, including pages, blogs, and media assets.",
-      metric: null,
-    },
-    {
-      text: "Optimized websites for speed, responsiveness, and cross-device compatibility.",
-      metric: null,
-    },
-    {
-      text: "Collaborated with the team to debug issues and implement improvements based on client requirements.",
-      metric: null,
-    },
-  ],
-  tech: ["WordPress", "HTML", "CSS", "JavaScript", "PHP"],
-}
+  {
+    company: "Printila Services Private Limited",
+    role: "Flutter Developer Intern",
+    period: "May 2026 — July 2026",
+    location: "Remote — Gurugram, Haryana",
+    project: "Production Print/Order-Management Platform",
+    achievements: [
+      {
+        text: "Shipped 8+ Flutter features for a production print/order-management platform serving commercial printing workflows.",
+        metric: "8+ Features",
+      },
+      {
+        text: "Reduced average REST API response latency by approximately 120ms by optimizing network calls and payload sizes.",
+        metric: "~120ms latency reduction",
+      },
+      {
+        text: "Integrated REST APIs, fixed production bugs, and collaborated with backend developers and QA to deliver production-ready features in Agile sprints.",
+        metric: "Agile Sprints",
+      },
+    ],
+    tech: ["Flutter", "Dart", "REST APIs", "Git", "Agile"],
+  },
+  {
+    company: "GEMA Education Pvt Ltd",
+    role: "WordPress Developer",
+    period: "Dec 2025 — Mar 2026",
+    location: "Remote — India",
+    project: "Responsive Educational Websites",
+    achievements: [
+      {
+        text: "Designed and developed responsive WordPress websites tailored to the educational sector.",
+        metric: null,
+      },
+      {
+        text: "Performed routine site maintenance including plugin updates, security checks, and performance optimization.",
+        metric: null,
+      },
+      {
+        text: "Troubleshot and resolved technical issues promptly to ensure minimal downtime and optimal user engagement.",
+        metric: null,
+      },
+    ],
+    tech: ["WordPress", "HTML", "CSS", "JavaScript", "PHP"],
+  },
 ];
 
 function ExperienceCard({

@@ -16,10 +16,10 @@ const fadeUp = {
 
 const interests = [
   { icon: "{ }", label: "Coding" },
-  { icon: "AI", label: "Artificial Intelligence" },
+  { icon: "AI", label: "AI & ML" },
   { icon: "Pr", label: "Problem Solving" },
-  { icon: "Wd", label: "Web Dev" },
-  { icon: "Cl", label: "Continuous Learning" },
+  { icon: "API", label: "API Design" },
+  { icon: "SD", label: "System Design" },
 ];
 
 export default function About() {
@@ -66,11 +66,14 @@ export default function About() {
               custom={1}
               className="text-lg leading-relaxed text-text-muted"
             >
-             I&apos;m a passionate Web Developer focused on building modern, responsive, and user-friendly web applications. I primarily work with{" "}
+             I&apos;m a full-stack and backend-focused software engineer with a strong foundation in Data Structures, Algorithms, and System Design. I primarily work with{" "}
 <span className="text-accent">React</span>,{" "}
-<span className="text-accent">Next.js</span>,{" "}
-<span className="text-accent">JavaScript</span>, and{" "}
-<span className="text-accent">WordPress</span>, and I&apos;m continuously learning new technologies to improve my development skills.
+<span className="text-accent">Node.js</span>,{" "}
+<span className="text-accent">Express</span>,{" "}
+<span className="text-accent">Python</span>,{" "}
+<span className="text-accent">Java</span>,{" "}
+<span className="text-accent">MongoDB</span>, and{" "}
+<span className="text-accent">PostgreSQL</span>.
 </motion.p>
 
 <motion.p
@@ -80,8 +83,9 @@ export default function About() {
   custom={2}
   className="mt-6 text-lg leading-relaxed text-text-muted"
 >
-  I have hands-on experience through real-world projects and a{" "}
-  <span className="text-text-primary">WordPress Internship</span>, where I built and customized websites while focusing on performance and user experience.
+  I have hands-on experience shipping production features across web and mobile platforms, backed by internships as a{" "}
+  <span className="text-text-primary">Flutter Developer Intern</span> and a{" "}
+  <span className="text-text-primary">WordPress Developer</span>.
 </motion.p>
 
 <motion.p
@@ -91,7 +95,7 @@ export default function About() {
   custom={3}
   className="mt-6 text-lg leading-relaxed text-text-muted"
 >
-  I enjoy building practical projects, exploring new tools, and continuously improving as a developer. In my free time, I like coding, learning new technologies, and building side projects.
+  I build AI-integrated and database-driven applications with close attention to API design, data modeling, and distributed system concepts, always striving to deliver optimized and robust solutions.
 </motion.p>
 
             {/* Interests */}
@@ -109,9 +113,7 @@ export default function About() {
                   whileHover={{ y: -2, scale: 1.03 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   initial={{ opacity: 0, y: 15 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  // @ts-expect-error - custom delay
-                  transitionDelay={`${0.6 + i * 0.08}s`}
+                  animate={inView ? { opacity: 1, y: 0, transition: { delay: 0.6 + i * 0.08, type: "spring", stiffness: 300, damping: 20 } } : {}}
                 >
                   <span className="font-mono text-xs text-accent">{item.icon}</span>
                   <span className="text-sm text-text-muted transition-colors group-hover:text-text-primary">
@@ -163,22 +165,22 @@ export default function About() {
                   <br />
                   <span className="ml-4 text-accent">&quot;role&quot;</span>
                   <span className="text-text-dim">: </span>
-                  <span className="text-[#A8DB80]">&quot;WordPress developer Intern&quot;</span>
+                  <span className="text-[#A8DB80]">&quot;Flutter Developer Intern&quot;</span>
                   <span className="text-text-dim">,</span>
                   <br />
                   <span className="ml-4 text-accent">&quot;company&quot;</span>
                   <span className="text-text-dim">: </span>
-                  <span className="text-[#A8DB80]">&quot;Gema Pvt. Ltd.&quot;</span>
+                  <span className="text-[#A8DB80]">&quot;Printila Services&quot;</span>
                   <span className="text-text-dim">,</span>
                   <br />
                   <span className="ml-4 text-accent">&quot;education&quot;</span>
                   <span className="text-text-dim">: </span>
-                  <span className="text-[#A8DB80]">&quot;B.E. Computer Engg.&quot;</span>
+                  <span className="text-[#A8DB80]">&quot;B.Tech. CSE (AIKTC)&quot;</span>
                   <span className="text-text-dim">,</span>
                   <br />
                   <span className="ml-4 text-accent">&quot;cgpa&quot;</span>
                   <span className="text-text-dim">: </span>
-                  <span className="text-[#D19A66]">9.0</span>
+                  <span className="text-[#D19A66]">9.4</span>
                   <span className="text-text-dim">,</span>
                   <br />
                   <span className="ml-4 text-accent">&quot;available&quot;</span>
