@@ -16,60 +16,89 @@ const fadeUp = {
 
 const projects = [
   {
-  title: "AI-Powered E-Commerce Website",
-  description:
-    "Developed a production-grade e-commerce website with secure authentication, Stripe payments, and AI-driven product discovery.",
-  longDesc:
-    "Integrated Stripe webhooks to handle real-time payment verification, order updates, role based access, and stock management. Built advanced filtering with pagination and keyword extraction, and enhanced search using LLM-based AI recommendations for better product discovery.",
-  tech: ["Node.js", "Express.js", "PostgreSQL", "Stripe", "Cloudinary", "JWT", "REST APIs", "LLM APIs"],
-  metrics: [
-    { label: "Payments", value: "Stripe Webhooks" },
-    { label: "Search", value: "AI Powered" },
-    { label: "System", value: "RBAC + Scalable" },
-  ],
-  accent: "#CCFF00",
-  featured: true,
+    title: "Factify",
+    subtitle: "Fake News & Hate Speech Detection System",
+    description:
+      "A research-driven AI application that detects fake news and hate speech across text, images, videos, and URLs using multimodal machine learning techniques.",
+    longDesc:
+      "Built a multimodal detection pipeline using PyTesseract OCR, Whisper ASR, and transformer-based NLP. Evaluated multiple models with DistilBERT achieving 96.5% accuracy. Research accepted and published at MICA 2025 (Springer).",
+    tech: ["Python", "Transformers", "DistilBERT", "PyTesseract", "Whisper", "MoviePy", "NLP", "OCR"],
+    metrics: [
+      { label: "Accuracy", value: "96.5% DistilBERT" },
+      { label: "Publication", value: "MICA 2025" },
+      { label: "Multi-Modal AI", value: "OCR + ASR" },
+    ],
+    accent: "#FF6B6B",
+    featured: true,
+    github: "https://github.com/Skshirin/factify",
   },
   {
-  title: "Factify",
-  subtitle: "Fake News Detection System",
-  description:
-    "Full-stack web application that detects and classifies fake news using machine learning and NLP techniques, providing real-time credibility analysis for articles and headlines.",
-  longDesc:
-    "Built an end-to-end fake news detection pipeline leveraging trained ML models with text preprocessing, TF-IDF vectorization, and classification algorithms. Integrated a responsive frontend with a scalable backend API to deliver instant predictions and improve information reliability for users.",
-  tech: ["React", "Node.js", "Express.js", "Python", "Scikit-learn", "NLP", "MongoDB"],
-  metrics: [
-    { label: "Accuracy", value: "High ML Precision" },
-    { label: "Detection", value: "Real-time" },
-  ],
-  accent: "#FF6B6B",
-  featured: false,
+    title: "Ransomware CTI Platform",
+    subtitle: "ML & Blockchain Threat Intel",
+    description:
+      "An AI-powered ransomware intelligence platform and Cyber Threat Intelligence (CTI) dashboard for malware intelligence collection and IOC analysis.",
+    longDesc:
+      "Monitors endpoint behavior via Sysmon, scores events with XGBoost (ROC-AUC 0.9956, F1 0.9614), auto-generates CTI reports, and publishes integrity hashes to the Polygon Amoy blockchain.",
+    tech: ["Next.js", "Node.js", "Express", "TypeScript", "MongoDB", "FastAPI", "Python", "Docker", "Hardhat", "Solidity", "Polygon", "Tailwind CSS"],
+    metrics: [
+      { label: "AI Analysis", value: "XGBoost (ROC 0.99)" },
+      { label: "Blockchain Verified", value: "Polygon Amoy" },
+      { label: "Architecture", value: "Modular Services" },
+    ],
+    accent: "#A855F7",
+    featured: true,
+    github: "https://github.com/Skshirin/ransomshield-cti",
   },
   {
-  title: "Smart Ingredient Analyzer",
-  subtitle: "AI-Powered Food & Cosmetic Safety App",
-  description:
-    "AI-driven system that scans product labels and detects harmful ingredients, delivering personalized risk scores based on user health conditions and allergies.",
-  tech: ["React Native", "FastAPI", "PyTorch", "OCR", "DistilBERT"],
-  metrics: [
-    { label: "Type", value: "Mobile App + AI Backend" },
-    { label: "Analysis", value: "Real-time + Personalized" },
-  ],
-  accent: "#FF6B35",
-  featured: true,
+    title: "EvoCart",
+    subtitle: "E-commerce Platform",
+    description:
+      "A production-grade e-commerce platform with a scalable backend, secure authentication, Stripe payments, and AI-powered product discovery.",
+    longDesc:
+      "Designed RESTful backend APIs with role-based access control and advanced filtering. Integrated the Stripe payment gateway with webhook handling for automated updates and stock management.",
+    tech: ["Node.js", "Express.js", "PostgreSQL", "Stripe", "REST APIs", "JWT"],
+    metrics: [
+      { label: "Database", value: "PostgreSQL" },
+      { label: "Payments", value: "Stripe Webhooks" },
+      { label: "Discovery", value: "AI Powered" },
+    ],
+    accent: "#CCFF00",
+    featured: true,
+    github: "https://github.com/Skshirin/AI-Driven-E-Commerce-Platform",
   },
   {
-  title: "Virtual Mouse",
-  subtitle: "Computer Vision Application",
-  description:
-    "Gesture-controlled virtual mouse system that enables users to interact with their computer using hand movements, eliminating the need for physical input devices.",
-  tech: ["Python", "OpenCV", "MediaPipe", "Computer Vision"],
-  metrics: [
-    { label: "Control", value: "Real-time Gesture Tracking" },
-    { label: "Input", value: "Touchless Interaction" },
-  ],
-  accent: "#A855F7",
-  featured: false,
+    title: "AI Chat Dashboard",
+    subtitle: "Multi-turn AI Chat Application",
+    description:
+      "A full-stack AI chatbot dashboard supporting multiple AI personas, conversation history, secure JWT authentication, and dynamically switchable personas.",
+    longDesc:
+      "Implements JWT access tokens and rotating HTTP-only refresh tokens. Features persistent multi-turn conversations stored in MongoDB and powered by Google's Gemini API.",
+    tech: ["React", "Vite", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB Atlas", "Google Gemini API", "JWT"],
+    metrics: [
+      { label: "AI Chat", value: "Multi-Turn Gemini" },
+      { label: "Personas", value: "4 Switchable" },
+      { label: "JWT Auth", value: "Rotating Tokens" },
+    ],
+    accent: "#00D4FF",
+    featured: false,
+    github: "https://github.com/Skshirin/AI-Chat-Dashboard",
+  },
+  {
+    title: "ChemScan",
+    subtitle: "Harmful Ingredient Detection System",
+    description:
+      "An AI-powered mobile application designed for classification of harmful food and cosmetic ingredients, achieving 97% accuracy on 30,000+ samples.",
+    longDesc:
+      "Integrates real-time ingredient scanning into a React Native app with OCR in 3–5 seconds, deploying the DistilBERT classifier via Hugging Face Inference API.",
+    tech: ["React Native", "DistilBERT", "NLP", "Hugging Face", "OCR", "PyTorch"],
+    metrics: [
+      { label: "Accuracy", value: "97% DistilBERT" },
+      { label: "OCR Scan", value: "3-5 Seconds" },
+      { label: "Analysis", value: "Personalized Risk" },
+    ],
+    accent: "#FF6B35",
+    featured: false,
+    github: "https://github.com/Skshirin/ingredients-hazard-detection",
   },
 ];
 
@@ -135,6 +164,7 @@ interface ProjectType {
   metrics: { label: string; value: string }[];
   accent: string;
   featured: boolean;
+  github?: string;
 }
 
 function FeaturedProject({
@@ -201,9 +231,25 @@ function FeaturedProject({
                 </span>
               </div>
 
-              <h3 className="font-display text-4xl tracking-wider text-text-primary transition-colors duration-300 group-hover:text-accent md:text-5xl">
-                {project.title}
-              </h3>
+              <div className="flex items-center gap-3.5">
+                <h3 className="font-display text-4xl tracking-wider text-text-primary transition-colors duration-300 group-hover:text-accent md:text-5xl">
+                  {project.title}
+                </h3>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-text-dim hover:text-accent transition-colors mt-2"
+                    data-cursor-hover
+                    aria-label="GitHub Repository"
+                  >
+                    <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                  </a>
+                )}
+              </div>
               {project.subtitle && (
                 <p className="mt-1 font-mono text-xs tracking-wider text-text-dim">
                   {project.subtitle}
@@ -316,9 +362,25 @@ function SmallProject({
             className="mb-4 h-[2px] w-8 transition-all duration-500 group-hover:w-16"
             style={{ background: project.accent }}
           />
-          <h4 className="font-display text-2xl tracking-wider text-text-primary transition-colors group-hover:text-accent">
-            {project.title}
-          </h4>
+          <div className="flex items-center gap-2.5">
+            <h4 className="font-display text-2xl tracking-wider text-text-primary transition-colors group-hover:text-accent">
+              {project.title}
+            </h4>
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-text-dim hover:text-accent transition-colors mt-0.5"
+                data-cursor-hover
+                aria-label="GitHub Repository"
+              >
+                <svg className="h-4.5 w-4.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                </svg>
+              </a>
+            )}
+          </div>
           {project.subtitle && (
             <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-text-dim">
               {project.subtitle}

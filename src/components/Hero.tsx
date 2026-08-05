@@ -5,10 +5,11 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue } from "fram
 import gsap from "gsap";
 
 const roles = [
-  "Full Stack Engineer",
-  "Cloud Architect",
-  "Startup Founder",
-  "Linux Enthusiast",
+  "Full Stack Developer",
+  "Backend Developer",
+  "Frontend Developer",
+  "Android Developer",
+  "Web Developer",
 ];
 
 export default function Hero() {
@@ -247,10 +248,10 @@ export default function Hero() {
           transition={{ delay: 1.2, duration: 0.8, ease: [0.23, 1, 0.32, 1] as [number, number, number, number] }}
           className="mt-8 max-w-xl text-base leading-relaxed text-text-muted sm:text-lg"
         >
-          Building responsive and user-friendly web applications using modern technologies.
+          Full-stack and backend-focused software engineer with a strong foundation in Data Structures, Algorithms, and System Design.
           <br />
           <span className="text-text-dim">
-          Passionate about creating real-world projects and improving my development skills.
+          Experienced in building AI-integrated applications and shipping features across web and mobile platforms.
           </span>
         </motion.p>
 
@@ -317,7 +318,7 @@ export default function Hero() {
         >
           {[
             { value: "Multiple", label: "Projects Completed" },
-            { value: "1", label: "Internship Experience" },
+            { value: "2", label: "Internships Completed" },
             { value: "100%", label: "Practical Learning" },
           ].map((stat, i) => (
             <motion.div
@@ -363,30 +364,46 @@ function RoleRotator({ roles }: { roles: string[] }) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      indexRef.current = (indexRef.current + 1) % roles.length;
+      const prevIndex = indexRef.current;
+      const nextIndex = (indexRef.current + 1) % roles.length;
+      indexRef.current = nextIndex;
+
       if (containerRef.current) {
-        const spans = containerRef.current.querySelectorAll("span");
-        spans.forEach((span, i) => {
-          if (i === indexRef.current) {
-            gsap.fromTo(
-              span,
-              { y: 30, opacity: 0, rotateX: -40 },
-              { y: 0, opacity: 1, rotateX: 0, duration: 0.5, ease: "power3.out" }
-            );
-            span.style.display = "block";
-          } else {
-            gsap.to(span, {
-              y: -30,
+        const spans = containerRef.current.querySelectorAll<HTMLSpanElement>(".role-span");
+        if (spans.length > 0) {
+          const prevSpan = spans[prevIndex];
+          const nextSpan = spans[nextIndex];
+
+          // Exit previous active span
+          if (prevSpan) {
+            gsap.to(prevSpan, {
+              y: -20,
               opacity: 0,
-              rotateX: 40,
-              duration: 0.3,
-              ease: "power3.in",
+              rotateX: 45,
+              duration: 0.4,
+              ease: "power2.in",
               onComplete: () => {
-                span.style.display = "none";
+                prevSpan.style.display = "none";
               },
             });
           }
-        });
+
+          // Enter next active span
+          if (nextSpan) {
+            nextSpan.style.display = "block";
+            gsap.fromTo(
+              nextSpan,
+              { y: 20, opacity: 0, rotateX: -45 },
+              {
+                y: 0,
+                opacity: 1,
+                rotateX: 0,
+                duration: 0.6,
+                ease: "power2.out",
+              }
+            );
+          }
+        }
       }
     }, 2500);
 
@@ -398,7 +415,7 @@ function RoleRotator({ roles }: { roles: string[] }) {
       {roles.map((role, i) => (
         <span
           key={role}
-          className="font-mono text-sm tracking-[0.15em] text-text-primary"
+          className="role-span absolute top-0 left-0 font-mono text-sm tracking-[0.15em] text-text-primary"
           style={{ display: i === 0 ? "block" : "none", transformStyle: "preserve-3d" }}
         >
           {"// "}
